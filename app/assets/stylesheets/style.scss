@@ -1,0 +1,161 @@
+body {
+    color: #49616b;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+header {
+    padding: 35px 0 30px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.logo {
+    max-width: 300px;
+    float: left;
+    margin-right: 15px;
+img {
+    height: auto;
+    max-width: 100%;
+}
+}
+
+.header-search-box {
+    float: right;
+    margin-top: 5px;
+    position: relative;
+a {
+    color: #fff;
+    display: block;
+    padding: 6.2px 8.7px;
+i {
+    font-size: 17px;
+}
+&:hover {
+     color: #357fe2;
+ }
+}
+}
+
+.main-nav {
+    float: right;
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+li {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    float: left;
+a {
+    color: #ffffff;
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 15px;
+    padding: 10px 0;
+    position: relative;
+    z-index: 99;
+    text-decoration: none;
+&:hover {
+     border-bottom: 2px solid #fff;
+ }
+}
+}
+}
+}
+
+.custom-header {
+    min-height: 200px;
+    padding: 150px 0 0;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+    background-color: #00132c;
+    background-image: url(image_path('cropped-net.jpg'));
+    background-size:cover;
+&::after {
+     background: #00132c;
+     content: "";
+     display: block;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     width: 100%;
+     z-index: -1;
+     opacity: 0.8;
+ }
+}
+
+.page-title {
+    font-family: "PT Sans",sans-serif;
+    font-weight: normal;
+    color: #ffffff;
+    font-size: 50px;
+    line-height: 1.2;
+    margin: 0 0 15px 0;
+}
+
+.separator {
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 100%;
+    display: block;
+    height: 7px;
+    margin: 0 auto 20px;
+    width: 7px;
+    position: relative;
+&::before {
+     background: #ddd none repeat scroll 0 0;
+     bottom: 3px;
+     clear: both;
+     content: "";
+     display: block;
+     height: 1px;
+     position: absolute;
+     right: 15px;
+     width: 50px;
+ }
+&::after {
+     background: #ddd none repeat scroll 0 0;
+     clear: both;
+     content: "";
+     display: block;
+     height: 1px;
+     position: absolute;
+     width: 50px;
+     bottom: 3px;
+     left: 15px;
+ }
+}
+
+.main {
+    height: 100%;
+    width: 800px;
+    margin: auto;
+}
+
+footer {
+    width: 100%;
+    height: 52px;
+    margin: auto;
+    background-color: #00132c;
+    color: #7188a7;
+    position: absolute;
+    bottom: 0;
+}
+
+.copyright {
+    padding: 15px 0px;
+}

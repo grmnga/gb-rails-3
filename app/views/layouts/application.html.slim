@@ -1,10 +1,35 @@
 doctype html
 html
   head
+    meta[charset="UTF-8"]
     title
       | Blog Hello World
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
+    = stylesheet_link_tag 'application', media: 'all'
+    = stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   body
-    = yield
+    header
+      .container
+        .logo
+          = link_to image_tag('logo-6414697.png', alt: "netskillup_logo"), '/'
+        .header-search-box
+          a[href="#"]
+            i.fa.fa-search
+        .main-nav
+          .wrap-menu-content
+            ul
+              li
+                = link_to 'Home', root_path
+              li
+                = link_to 'About', about_path
+    .custom-header
+      .container
+        h2.page-title
+          | Блог для тех, кто готовится к сертификации Cisco Certified Network Associate 200-125
+        span.separator
+    .main
+      = yield
+    footer
+      .container
+        .copyright
+          | Copyright © All rights reserved.
