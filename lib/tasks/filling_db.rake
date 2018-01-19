@@ -3,7 +3,7 @@ namespace :db do
   task filling: :environment do
     require 'ffaker'
     10.times do
-      name = FFaker::NameRU.name
+      name = FFaker::Name.name
       email  = FFaker::Internet.email
       moderator = FFaker::Boolean.maybe
       User.create(name: name, email: email, moderator: moderator)
