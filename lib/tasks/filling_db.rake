@@ -12,14 +12,14 @@ namespace :db do
     15.times do
       title = FFaker::LoremRU.phrase
       body = FFaker::LoremRU.paragraphs
-      user = FFaker::Random.rand(0..9)
+      user = FFaker::Random.rand(1..10)
       Post.create(title: title, body: body, user_id: user)
     end
 
     20.times do
       body = FFaker::LoremRU.paragraph
-      user = FFaker::Random.rand(0..9)
-      post = FFaker::Random.rand(0..14)
+      user = FFaker::Random.rand(1..10)
+      post = FFaker::Random.rand(1..15)
       Comment.create(body: body, user_id: user, post_id: post)
     end
   end

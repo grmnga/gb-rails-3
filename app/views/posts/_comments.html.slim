@@ -1,0 +1,18 @@
+- comments = Comment.where(post: @post)
+#comments.comments-area
+  h2.comments-title
+    | Комментариев: 
+    = comments.length
+  ol.comment-list
+    - comments.each do |comment|
+      li#comment-5.comment.byuser.comment-author-admin.bypostauthor.even.thread-even.depth-1
+        article#div-comment-5.comment-body
+          footer.comment-meta
+            .comment-author.vcard
+              b.fn
+                = comment.user.name
+              .comment-metadata
+                = comment.created_at.strftime("%d-%m-%Y")
+          .comment-content
+            p
+              = comment.body
