@@ -1,0 +1,31 @@
+#comments.coments-area
+  #respond.coment-respond
+    h3
+      | Добавить комментарий
+    form#commentform
+      p.comment-notes
+        span#email-notes
+          | Ваш e-mail не будет опубликован.
+        |  Обязательные поля помечены
+        span.required
+          | *
+      p.comment-form-comment
+        label[for="comment"]
+          | Комментарий
+        textarea#comment[name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"]
+      p.comment-form-author
+        label[for="author"]
+          | Имя
+          span.required
+            | *
+        input#author[name="author" type="text" value="" size="30" maxlength="245" aria-required="true" required="required"]
+      p.comment-form-email
+        label[for="email"]
+          | E-mail
+          span.required
+            | *
+        input#email[name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required="true" required="required"]
+      p.form-submit
+        input#submit.submit[name="submit" type="submit" value="Отправить комментарий"]
+        input#comment_post_ID[type="hidden" name="comment_post_ID" value="211"]
+        input#comment_parent[type="hidden" name="comment_parent" value="0"]
