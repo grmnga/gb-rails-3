@@ -12,13 +12,10 @@
                 .item-content
                   p
                     = post.body
-                    a.read-more[href="#"]
-                      | Читать далее …
+                    = link_to "Читать далее …", post, :class => 'read-more'
               .item-footer
                 span.posted-on
-                  a[href="#"]
-                    time.item-date[datetime=""]
-                      | 12.12.2017
+                  = post.created_at.strftime("%d-%m-%Y")
                 span.byline
                   = post.user.name
                 span.comments-link

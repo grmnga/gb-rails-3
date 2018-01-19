@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+<meta name="Keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Serif" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/jquery.sidr.dark.min.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.sidr.min.js"></script>
+<title>netskillup.ru</title>
+</head>
+<body>
+<div class="page-wrap">
+<header>
+	<div class="container">
+		<div class="logo"><a href="#"><img width="268" height="67" src="img/logo-6414697.png" alt="netskillup"></a></div>
+		<div class="header-search-box">
+			<a href="#" class="search-icon"><i class="fa fa-search"></i></a>
+			<div class="search-box-wrap">
+				<form role="search" method="get" class="search-form" action="">
+					<label>
+						<span class="screen-reader-text">Search for:</span>
+						<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+					</label>
+					<input type="submit" class="search-submit" value="">
+				</form>
+		    </div>
+		</div>
+		<div class="main-nav">
+			<div class="wrap-menu-content">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+		</div>
+		<a id="mobile-trigger" href="#mob-menu" class="mobile-menu"><i class="fa fa-reorder"></i></a>
+		<div id="mob-menu">
+			<div class="search-box-wrap">
+				<form role="search" method="get" class="search-form" action="">
+					<label>
+						<span class="screen-reader-text">Search for:</span>
+						<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+					</label>
+					<input type="submit" class="search-submit" value="">
+				</form>
+		    </div>
+			<ul><li><a href="#">Home</a></li></ul>
+			<ul><li><a href="#">About</a></li></ul>
+		</div>
+</div>
+</header>
+<div class="custom-header">
+	<div class="container">
+		<h2 class="page-title">Блог для тех, кто хочет пройти сертификацию Cisco Certified Network Associate 200-125</h2>
+		<span class="separator"></span>
+	</div>
+</div>
+
+<div class="content">
+	<div class="container">
+		<div class="inner-wrapper">
+			<div class="primary">
+				<main id="main" class="site-main" role="main">
+					<article id="" class="item">
+						<div class="item-content-wrapper">
+							<div class="item-solo-content">
+								<h3 style="text-align: center;">Настройка ABR и&nbsp;ASBR</h3>
+								<p>Топология сети:</p>
+								<p><img class="alignnone" src="img/ospf-abr-asbr.jpg"></img></p>
+								<p>Схема данной статьи аналогична предыдущей, за исключением интерфейса E0/0 на R2. Он участвует в процессе маршрутизации EIGRP 100.</p>
+								<p>Итак, интерфейсы на маршрутизаторах настроены в соответствии с топологией, теперь поднимем OSPF на роутерах (в качестве Router-id используем ip-адрес с порядковым номером роутера)</p>
+								<p>R1:</p>
+<pre><code>R1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#router ospf 1
+R1(config-router)#router-id 1.1.1.1
+R1(config-router)#network 1.0.0.0 0.255.255.255 area 0
+R1(config-router)#network 10.0.0.0 0.255.255.255 area 1
+R1(config-router)#end
+</code></pre>
+								<div class="addtoany_content">
+									<div class="addtoany_list"">
+										<a href="#" title="Facebook">
+											<span style="background-color: rgb(59, 89, 152);">
+												<svg viewBox="0 0 32 32">
+												<path fill="#FFF" d="M17.78 27.5V17.008h3.522l.527-4.09h-4.05v-2.61c0-1.182.33-1.99 2.023-1.99h2.166V4.66c-.375-.05-1.66-.16-3.155-.16-3.123 0-5.26 1.905-5.26 5.405v3.016h-3.53v4.09h3.53V27.5h4.223z"></path>
+												</svg>
+											</span>
+										</a>
+										<a href="#" title="LinkedIn">
+											<span style="background-color: rgb(0, 123, 181);">
+												<svg viewBox="0 0 32 32">
+												<path d="M6.227 12.61h4.19v13.48h-4.19V12.61zm2.095-6.7a2.43 2.43 0 0 1 0 4.86c-1.344 0-2.428-1.09-2.428-2.43s1.084-2.43 2.428-2.43m4.72 6.7h4.02v1.84h.058c.56-1.058 1.927-2.176 3.965-2.176 4.238 0 5.02 2.792 5.02 6.42v7.395h-4.183v-6.56c0-1.564-.03-3.574-2.178-3.574-2.18 0-2.514 1.7-2.514 3.46v6.668h-4.187V12.61z" fill="#FFF"></path>
+												</svg>
+											</span>
+										</a>
+										<a href="#" title="Google+">
+											<span style="background-color: rgb(221, 75, 57);">
+												<svg viewBox="0 0 32 32">
+												<path d="M27 15h-2v-2h-2v2h-2v2h2v2h2v-2h2m-15-2v2.4h3.97c-.16 1.03-1.2 3.02-3.97 3.02-2.39 0-4.34-1.98-4.34-4.42s1.95-4.42 4.34-4.42c1.36 0 2.27.58 2.79 1.08l1.9-1.83C15.47 9.69 13.89 9 12 9c-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.72-2.84 6.72-6.84 0-.46-.05-.81-.11-1.16H12z" fill="#FFF"></path>
+												</svg>
+											</span>
+										</a>
+										<a href="#" title="Twitter">
+											<span style="background-color: rgb(85, 172, 238);">
+												<svg viewBox="0 0 32 32">
+												<path fill="#FFF" d="M28 8.557a9.913 9.913 0 0 1-2.828.775 4.93 4.93 0 0 0 2.166-2.725 9.738 9.738 0 0 1-3.13 1.194 4.92 4.92 0 0 0-3.593-1.55 4.924 4.924 0 0 0-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.942 4.942 0 0 0-.665 2.477c0 1.71.87 3.214 2.19 4.1a4.968 4.968 0 0 1-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174-.318 0-.626-.03-.928-.086a4.935 4.935 0 0 0 4.6 3.42 9.893 9.893 0 0 1-6.114 2.107c-.398 0-.79-.023-1.175-.068a13.953 13.953 0 0 0 7.55 2.213c9.056 0 14.01-7.507 14.01-14.013 0-.213-.005-.426-.015-.637.96-.695 1.795-1.56 2.455-2.55z"></path>
+												</svg>
+											</span>
+										</a>
+										<a href="#" title="VK">
+											<span style="background-color: rgb(88, 126, 163);">
+												<svg viewBox="0 0 32 32">
+												<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFF" d="M15.764 22.223h1.315s.394-.044.6-.262c.184-.2.18-.574.18-.574s-.03-1.764.79-2.023c.81-.255 1.844 1.705 2.942 2.46.832.57 1.464.445 1.464.445l2.936-.04s1.538-.097.81-1.304c-.06-.1-.426-.894-2.186-2.526-1.843-1.71-1.594-1.434.624-4.39 1.353-1.804 1.893-2.902 1.724-3.374-.16-.45-1.153-.33-1.153-.33l-3.306.02s-.247-.034-.428.074c-.178.108-.293.356-.293.356s-.522 1.394-1.223 2.58c-1.47 2.5-2.06 2.633-2.3 2.476-.563-.36-.42-1.454-.42-2.23 0-2.423.365-3.435-.72-3.696-.357-.085-.623-.143-1.544-.15-1.182-.014-2.18.003-2.743.28-.378.185-.667.595-.49.62.218.027.713.13.975.49.34.46.33 1.496.33 1.496s.193 2.852-.46 3.206c-.442.245-1.056-.252-2.37-2.52-.67-1.163-1.18-2.446-1.18-2.446s-.1-.24-.273-.37c-.212-.155-.506-.204-.506-.204l-3.145.02s-.473.015-.647.22c-.154.183-.01.56-.01.56s2.46 5.757 5.245 8.657c2.553 2.66 5.454 2.485 5.454 2.485z"></path>
+												</svg>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item-footer">
+							<span class="posted-on"><a href="#"><time class="item-date" datetime="">12.12.2017</time></a></span>
+							<span class="byline"><a href="#">netskillup</a></span>
+							<span class="comments-link"><a href="#">Leave a comment</a></span>
+							<span class="tags-links">
+								<a href="#">CCNA</a>, 
+								<a href="#">CCNP</a>, 
+								<a href="#">CISCO</a>, 
+								<a href="#">OSPF</a>, 
+								<a href="#">Настройка OSPF</a>
+							</span>	
+						</div>
+					</article>
+					<nav class="post-navigation">
+						<div class="nav-links">
+							<div class="nav-previous">
+								<a href="#">
+									<span>Previous</span> 
+									<span class="post-title">Настройка OSPF. Настройка OSPF для нескольких областей.</span>
+								</a>
+							</div>
+						</div>
+					</nav>
+					
+					<div id="comments" class="coments-area">
+						<div id="respond" class="coment-respond">
+							<h3>Добавить комментарий</h3>
+							<form id="commentform">
+								<p class="comment-notes">
+									<span id="email-notes">Ваш e-mail не будет опубликован.</span> Обязательные поля помечены <span class="required">*</span>
+								</p>
+								<p class="comment-form-comment">
+									<label for="comment">Комментарий</label> 
+									<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea>
+								</p>
+								<p class="comment-form-author">
+									<label for="author">Имя <span class="required">*</span></label> 
+									<input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required="true" required="required">
+								</p>
+								<p class="comment-form-email">
+									<label for="email">E-mail <span class="required">*</span></label> 
+									<input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required="true" required="required">
+								</p>
+								<p class="comment-form-url">
+									<label for="url">Сайт</label> 
+									<input id="url" name="url" type="url" value="" size="30" maxlength="200">
+								</p>
+								<p class="form-submit">
+									<input name="submit" type="submit" id="submit" class="submit" value="Отправить комментарий"> <input type="hidden" name="comment_post_ID" value="211" id="comment_post_ID">
+									<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+								</p>					
+							</form>
+						</div>
+					</div>
+					
+					
+				</main>
+			</div>
+			<div class="sidebar">
+				<aside id="search-2" class="widget widget_search">
+					<form role="search" method="get" class="search-form" action="#">
+						<label>
+							<span class="screen-reader-text">Search for:</span>
+							<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+						</label>
+						<input type="submit" class="search-submit" value="">
+					</form>
+				</aside>		
+				<aside id="recent-posts-2" class="widget widget_recent_entries">		
+					<h2 class="widget-title">Свежие записи</h2>		
+					<ul>
+						<li>
+							<a href="#">Настройка OSPF. Конфигурирование ABR и ASBR</a>
+						</li>
+						<li>
+							<a href="#">Настройка OSPF. Настройка OSPF для нескольких областей.</a>
+						</li>
+						<li>
+							<a href="#">Настройка OSPF. Настройка OSPF для одной области</a>
+						</li>
+						<li>
+							<a href="#">Лабораторная работа EIGRP. Подробный разбор задания.</a>
+						</li>
+						<li>
+							<a href="#">Настройка EIGRP. Таймеры и EIGRP-интерфейсы</a>
+						</li>
+					</ul>
+				</aside>
+				<aside id="categories-2" class="widget widget_categories">
+					<h2 class="widget-title">Рубрики</h2>		
+					<ul>
+						<li class="cat-item cat-item-11">
+							<a href="#">Настройка оборудования</a>
+						</li>
+					</ul>
+				</aside>
+				<aside id="tag_cloud-3" class="widget widget_tag_cloud">
+					<h2 class="widget-title">Метки</h2>
+					<div class="tagcloud">
+						<a href="#">CCNA</a>
+						<a href="#">CCNP</a>
+						<a href="#">CISCO</a>
+						<a href="#">EIGRP</a>
+						<a href="#">OSPF</a>
+						<a href="#">Лабораторная работа</a>
+						<a href="#">Настройка EIGRP</a>
+						<a href="#">Настройка OSPF</a>
+					</div>
+				</aside>	
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<footer>
+	<div class="container">
+		<div class="copyright">Copyright © All rights reserved.</div>
+	</div>
+</footer>
+</body>
+
