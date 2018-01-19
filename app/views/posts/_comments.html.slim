@@ -1,7 +1,7 @@
 - comments = Comment.where(post: @post)
 #comments.comments-area
   h2.comments-title
-    | Комментариев: 
+    ' Комментариев:
     = comments.length
   ol.comment-list
     - comments.each do |comment|

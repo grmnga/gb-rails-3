@@ -10,7 +10,7 @@
                 .nav-previous
                   = link_to do
                     span
-                      | Previous
+                      | Предыдущая статья:
                     span.post-title
                       = Post.find(@post.id - 1).title
                     Post.find(@post.id - 1)
