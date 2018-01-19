@@ -3,42 +3,8 @@
     .inner-wrapper
       .primary
         main#main.site-main[role="main"]
-          - @posts.each do |post|
-            article.item
-              .item-content-wrapper
-                .item-header
-                  h2.item-title
-                    = link_to post.title, post
-                .item-content
-                  p
-                    = post.body
-                    = link_to "Читать далее …", post, :class => 'read-more'
-              .item-footer
-                span.posted-on
-                  = post.created_at.strftime("%d-%m-%Y")
-                span.byline
-                  = post.user.name
-                span.comments-link
-                  a[href="#"]
-                    | Leave a comment
-                span.cat-links
-                  a[href="#"]
-                    | Настройка оборудования
-                span.tags-links
-                  a[href="#"]
-                    | CCNA
-                  | ,
-                  a[href="#"]
-                    | CCNP
-                  | ,
-                  a[href="#"]
-                    | CISCO
-                  | ,
-                  a[href="#"]
-                    | OSPF
-                  | ,
-                  a[href="#"]
-                    | Настройка OSPF
+          = render 'posts'
+      = render 'sidebar'
 
 
 /h1 Listing posts

@@ -1,0 +1,21 @@
+- @posts.each do |post|
+  article.item
+    .item-content-wrapper
+      .item-header
+        h2.item-title
+          = link_to post.title, post
+      .item-content
+        p
+          = post.body
+          = link_to "Читать далее …", post, :class => 'read-more'
+    .item-footer
+      span.posted-on
+        = post.created_at.strftime("%d-%m-%Y")
+      span.byline
+        = post.user.name
+      span.comments-link
+        a[href="#"]
+          | Оставить комментарий
+      span.cat-links
+
+      span.tags-links
