@@ -1,0 +1,176 @@
+doctype html
+head
+  |  <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" /> 
+  meta[name="Keywords" content=""]
+  meta[name="description" content=""]
+  meta[name="viewport" content="width=device-width, initial-scale=1.0"]
+  link[rel="shortcut icon" href="" type="image/x-icon"]
+  link[rel="stylesheet" type="text/css" href="css/style.css"]
+  link[rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
+  link[href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Serif" rel="stylesheet"]
+  link[rel="stylesheet" type="text/css" href="css/jquery.sidr.dark.min.css"]
+  script[type="text/javascript" src="js/jquery.js"]
+  script[type="text/javascript" src="js/custom.min.js"]
+  script[type="text/javascript" src="js/jquery.sidr.min.js"]
+  title
+    | netskillup.ru
+body
+  .page-wrap
+    header
+      .container
+        .logo
+          a[href="#"]
+            img[width="268" height="67" src="img/logo-6414697.png" alt="netskillup"]
+        .header-search-box
+          a.search-icon[href="#"]
+            i.fa.fa-search
+          .search-box-wrap
+            form.search-form[role="search" method="get" action=""]
+              label
+                span.screen-reader-text
+                  | Search for:
+                input.search-field[type="search" placeholder="Search …" value="" name="s"]
+              input.search-submit[type="submit" value=""]
+        .main-nav
+          .wrap-menu-content
+            ul
+              li
+                a[href="#"]
+                  | Home
+              li
+                a[href="#"]
+                  | About
+        a#mobile-trigger.mobile-menu[href="#mob-menu"]
+          i.fa.fa-reorder
+        #mob-menu
+          .search-box-wrap
+            form.search-form[role="search" method="get" action=""]
+              label
+                span.screen-reader-text
+                  | Search for:
+                input.search-field[type="search" placeholder="Search …" value="" name="s"]
+              input.search-submit[type="submit" value=""]
+          ul
+            li
+              a[href="#"]
+                | Home
+          ul
+            li
+              a[href="#"]
+                | About
+    .custom-header
+      .container
+        h2.page-title
+          | Блог для тех, кто хочет пройти сертификацию Cisco Certified Network Associate 200-125
+        span.separator
+    .content
+      .container
+        .inner-wrapper
+          .primary
+            main#main.site-main[role="main"]
+              article.item
+                .item-content-wrapper
+                  .item-header
+                    h2.item-title
+                      a[href="#"]
+                        | Настройка OSPF. Конфигурирование ABR и ASBR
+                  .item-content
+                    p
+                      | Настройка ABR и ASBR Топология сети: Схема данной статьи аналогична предыдущей, за исключением интерфейса E0/0 на R2. Он участвует в процессе маршрутизации EIGRP 100. Итак, интерфейсы на маршрутизаторах настроены в соответствии с топологией, теперь поднимем OSPF на роутерах (в качестве Router-id 
+                      a.read-more[href="#"]
+                        | Читать далее …
+                .item-footer
+                  span.posted-on
+                    a[href="#"]
+                      time.item-date[datetime=""]
+                        | 12.12.2017
+                  span.byline
+                    a[href="#"]
+                      | netskillup
+                  span.comments-link
+                    a[href="#"]
+                      | Leave a comment
+                  span.cat-links
+                    a[href="#"]
+                      | Настройка оборудования
+                  span.tags-links
+                    a[href="#"]
+                      | CCNA
+                    | , 
+                    a[href="#"]
+                      | CCNP
+                    | , 
+                    a[href="#"]
+                      | CISCO
+                    | , 
+                    a[href="#"]
+                      | OSPF
+                    | , 
+                    a[href="#"]
+                      | Настройка OSPF
+              nav.navigation.pagination[role="navigation"]
+                .nav-links
+                  span.page-numbers.current
+                    | 1
+                  a.page-numbers[href="#"]
+                    | 2
+                  a.next.page-numbers[href="#"]
+                    | Далее
+          .sidebar
+            aside#search-2.widget.widget_search
+              form.search-form[role="search" method="get" action="#"]
+                label
+                  span.screen-reader-text
+                    | Search for:
+                  input.search-field[type="search" placeholder="Search …" value="" name="s"]
+                input.search-submit[type="submit" value=""]
+            aside#recent-posts-2.widget.widget_recent_entries
+              h2.widget-title
+                | Свежие записи
+              ul
+                li
+                  a[href="#"]
+                    | Настройка OSPF. Конфигурирование ABR и ASBR
+                li
+                  a[href="#"]
+                    | Настройка OSPF. Настройка OSPF для нескольких областей.
+                li
+                  a[href="#"]
+                    | Настройка OSPF. Настройка OSPF для одной области
+                li
+                  a[href="#"]
+                    | Лабораторная работа EIGRP. Подробный разбор задания.
+                li
+                  a[href="#"]
+                    | Настройка EIGRP. Таймеры и EIGRP-интерфейсы
+            aside#categories-2.widget.widget_categories
+              h2.widget-title
+                | Рубрики
+              ul
+                li.cat-item.cat-item-11
+                  a[href="#"]
+                    | Настройка оборудования
+            aside#tag_cloud-3.widget.widget_tag_cloud
+              h2.widget-title
+                | Метки
+              .tagcloud
+                a[href="#"]
+                  | CCNA
+                a[href="#"]
+                  | CCNP
+                a[href="#"]
+                  | CISCO
+                a[href="#"]
+                  | EIGRP
+                a[href="#"]
+                  | OSPF
+                a[href="#"]
+                  | Лабораторная работа
+                a[href="#"]
+                  | Настройка EIGRP
+                a[href="#"]
+                  | Настройка OSPF
+  footer
+    .container
+      .copyright
+        | Copyright © All rights reserved.
