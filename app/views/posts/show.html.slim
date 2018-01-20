@@ -8,12 +8,12 @@
             .nav-links
               - unless Post.first == @post
                 .nav-previous
-                  = link_to do
+                  = link_to(Post.find_by_id(@post.id - 1)) do
                     span
                       | Предыдущая статья:
                     span.post-title
                       = Post.find(@post.id - 1).title
-                    Post.find(@post.id - 1)
+
           = render 'comments'
           = render 'new_comment'
       = render 'sidebar'
