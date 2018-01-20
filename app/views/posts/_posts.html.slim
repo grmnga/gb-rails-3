@@ -12,7 +12,7 @@
       span.posted-on
         = post.created_at.strftime("%d-%m-%Y")
       span.byline
-        = post.user.name
+        = link_to post.user.name, '#'
       span.comments-link
         a[href="#"]
           | Оставить комментарий

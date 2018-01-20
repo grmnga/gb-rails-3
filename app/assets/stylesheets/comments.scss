@@ -44,6 +44,14 @@ ol.comment-list li {
 .comment-meta {
   background: #fff;
 }
+
+.fn a {
+  color: #1a1a1a;
+  &:hover {
+    color: #357fe2;
+  }
+}
+
 .comment .comment-body {
   background-color: #ffffff;
   border: 1px solid #dddddd;

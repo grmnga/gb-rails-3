@@ -10,7 +10,7 @@
           footer.comment-meta
             .comment-author.vcard
               b.fn
-                = comment.user.name
+                = link_to comment.user.name, '#'
               .comment-metadata
                 = comment.created_at.strftime("%d-%m-%Y")
           .comment-content

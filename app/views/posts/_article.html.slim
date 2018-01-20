@@ -34,7 +34,7 @@ article.item
         time.item-date[datetime=""]
           = @post.created_at.strftime("%d-%m-%Y")
     span.byline
-      = @post.user.name
+      = link_to @post.user.name, '#'
     span.comments-link
       a[href="#"]
         | Leave a comment
