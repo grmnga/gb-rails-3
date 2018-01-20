@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Link to Heroku: [сlick](https://morning-dusk-95302.herokuapp.com/)
 
-Things you may want to cover:
+* Заполнение базы данными с помощью Ffaker:
 
-* Ruby version
+  `rake db:filling`
+  
+# Изменения:
 
-* System dependencies
+* Реализована валидация данных о пользователях, постах и комментариях
 
-* Configuration
+* Добавлена таблица для оценок пользователей (значение оценки, id поста, id usera)
 
-* Database creation
+* На главной странице выводятся все посты
 
-* Database initialization
+* У каждого поста есть своя страница
 
-* How to run the test suite
+* Под каждым постом (кроме первого) есть ссылка на предыдущий
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* У случайных постов есть случайное количество комментариев
